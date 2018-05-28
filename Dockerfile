@@ -6,6 +6,9 @@ RUN apk --update add tzdata \
 	&& cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
 	&& apk del tzdata
 
+# For htpasswd
+RUN apk add --update apache2-utils
+
 # squid
 RUN apk --update add squid \
 	&& apk --update add curl \
