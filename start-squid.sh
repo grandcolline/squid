@@ -12,7 +12,7 @@ HTPASSWD=$(/usr/bin/which htpasswd)
 
 # User Setting
 echo "user setting..."
-"$HTPASSWD" -c /etc/squid/passwd $PROXY_USER $PROXY_PASS
+"$HTPASSWD" -cb /etc/squid/passwd "$PROXY_USER" "$PROXY_PASS"
 
 # Prepare the cache using Squid.
 echo "Initializing cache..."
